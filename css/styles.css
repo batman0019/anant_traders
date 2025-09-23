@@ -73,4 +73,21 @@ body{font-family:'Poppins',system-ui,Segoe UI,Arial;color:var(--dark);background
   .hero-right img{max-width:100%}
   .nav-inner{flex-wrap:wrap}
   .search{order:3;width:100%}
+  .container { max-width: 100%; padding: 0 8px; }
+  .card, .auth-card { padding: 14px; }
+  .products-grid { grid-template-columns: 1fr; gap: 12px; }
+  .product .media { height: 160px; }
+  .product img { max-height: 120px; }
+  .controls, .filters, .view-toggle { flex-direction: column; gap: 8px; align-items: stretch; }
+  .checkout-row, .cart-item { flex-direction: column; gap: 8px; }
+  .cart-item img { width: 60px; height: 60px; }
+  .auth-card { max-width: 98vw; }
+  .hero-left h1 { font-size: 24px; }
+  .product h4 { font-size: 15px; }
+  .product p, .price { font-size: 13px; }
+  .btn-primary, .btn-outline, .btn-link { padding: 10px 10px; font-size: 15px; }
+  .input input { padding: 10px; font-size: 15px; }
+  .nav-inner { padding: 10px 8px; }
+  .logo { height: 32px; }
+  .footer { padding: 12px 0; font-size: 13px; }
 }
