@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Anant Traders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <div class="auth-card card">
+      <a href="/" class="brand center"><img src="assets/logo.svg" class="logo" alt="logo"><h2>ANANT TRADERS</h2></a>
+      <form id="login-form" onsubmit="return handleLogin(event)">
+        <label class="input">
+          <span>Email</span>
+          <input type="email" name="email" required/>
+        </label>
+        <label class="input">
+          <span>Password</span>
+          <input type="password" name="password" required minlength="6"/>
+        </label>
+        <button class="btn-primary" type="submit">Login</button>
+        <p class="muted">New here? <a href="signup.html">Create an account</a></p>
+      </form>
+    </div>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>

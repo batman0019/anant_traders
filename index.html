@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anant Traders — Modern Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/"><img src="assets/logo.svg" alt="Anant Traders" class="logo"> <span>ANANT TRADERS</span></a>
+      <div class="search">
+        <input id="search" placeholder="Search for products, sarees, kurtas..." />
+      </div>
+      <nav class="nav-actions">
+        <a href="login.html" class="btn-link">Login</a>
+        <a href="signup.html" class="btn-primary">Sign up</a>
+        <a href="cart.html" class="cart-btn">Cart <span id="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div class="hero-left">
+        <h1>Modern clothing. Timeless style.</h1>
+        <p class="muted">Curated collection of T‑shirts, Sarees, Kurtas and Nightwear. Easy returns • Fast shipping</p>
+        <div class="cta-row">
+          <button class="btn-primary" onclick="filterProducts('all')">Shop All</button>
+          <button class="btn-outline" onclick="filterProducts('saree')">Explore Sarees</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="assets/hero-placeholder.png" alt="hero" />
+      </div>
+    </section>
+
+    <section class="controls">
+      <div class="filters">
+        <label>Category
+          <select id="category-filter" onchange="applyFilters()">
+            <option value="all">All</option>
+            <option value="tshirt">T-shirts</option>
+            <option value="saree">Sarees</option>
+            <option value="kurta">Kurtas</option>
+            <option value="nightwear">Nightwear</option>
+          </select>
+        </label>
+
+        <label>Sort
+          <select id="sort-select" onchange="applyFilters()">
+            <option value="popular">Popular</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="view-toggle">
+        <button onclick="toggleView('grid')" class="active" id="grid-btn">Grid</button>
+        <button onclick="toggleView('list')" id="list-btn">List</button>
+      </div>
+    </section>
+
+    <section id="products" class="products-grid"></section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© <span id="year"></span> Anant Traders — All rights reserved.</div>
+      <div class="muted">Built with ♥ — lightweight HTML/CSS/JS + Go backend</div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

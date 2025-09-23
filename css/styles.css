@@ -1,0 +1,76 @@
+/* Modern attractive styles - lightweight and responsive */
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#1fb6ff;
+  --dark:#0f1724;
+  --glass: rgba(255,255,255,0.6);
+  --shadow: 0 6px 18px rgba(15,23,36,0.08);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{font-family:'Poppins',system-ui,Segoe UI,Arial;color:var(--dark);background:linear-gradient(180deg,#f7f9fb, #eef2f6);margin:0}
+
+.container{max-width:1100px;margin:28px auto;padding:0 16px}
+.card{background:var(--card);border-radius:12px;padding:18px;box-shadow:var(--shadow);}
+
+.nav{position:sticky;top:0;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);z-index:30;border-bottom:1px solid rgba(16,24,40,0.04)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:12px 16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--dark);font-weight:600}
+.logo{height:44px}
+.search{flex:1}
+.search input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #e6edf3;background:white}
+
+.nav-actions{display:flex;align-items:center;gap:10px}
+.btn-link{color:var(--dark);text-decoration:none;padding:8px 10px;border-radius:8px}
+.btn-primary{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600;box-shadow:0 6px 18px rgba(31,182,255,0.15)}
+.btn-outline{background:transparent;border:1px solid rgba(15,23,36,0.06);padding:10px 14px;border-radius:10px;cursor:pointer}
+
+.hero{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:28px}
+.hero-left h1{margin:0;font-size:32px}
+.hero-left .muted{color:var(--muted);margin-top:6px}
+.hero-right img{max-width:320px;border-radius:12px;box-shadow:var(--shadow)}
+
+.controls{display:flex;justify-content:space-between;align-items:center;margin:18px 0}
+.filters{display:flex;gap:12px;align-items:center}
+.filters select{padding:8px 10px;border-radius:8px;border:1px solid #e7eef6;background:white}
+
+.view-toggle button{padding:8px 10px;border-radius:8px;border:0;cursor:pointer;background:transparent}
+.view-toggle .active{background:rgba(15,23,36,0.04)}
+
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+
+.product{border-radius:12px;overflow:hidden;position:relative;background:linear-gradient(180deg,white, #fbfdff);transition:transform .18s ease, box-shadow .18s ease}
+.product:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(15,23,36,0.08)}
+.product .media{height:220px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#f8fafc,#fff);}
+.product img{max-height:200px;max-width:100%}
+.product .body{padding:12px}
+.product h4{margin:0 0 6px 0;font-size:16px}
+.product p{margin:0;color:var(--muted);font-size:14px}
+.product .actions{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.price{font-weight:700;color:var(--dark)}
+
+.footer{padding:18px 0;background:transparent;color:var(--muted);margin-top:28px;border-top:1px solid rgba(15,23,36,0.03)}
+
+.auth-page{display:grid;place-items:center;min-height:80vh;padding:16px}
+.auth-card{width:100%;max-width:420px;text-align:left;padding:28px}
+.auth-card .brand.center{display:flex;align-items:center;flex-direction:column;gap:8px;text-decoration:none;color:var(--dark)}
+.input{display:block;margin:10px 0}
+.input span{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+.input input{width:100%;padding:12px;border-radius:8px;border:1px solid #e6eef6}
+
+.toast{position:fixed;right:20px;bottom:20px;padding:12px 16px;border-radius:8px;background:rgba(0,0,0,0.8);color:white}
+.hidden{display:none}
+
+.admin-card{max-width:700px;margin:0 auto}
+.checkout-row{display:flex;justify-content:space-between;gap:12px;margin-top:12px}
+.cart-item{display:flex;gap:12px;align-items:center;padding:12px;border-radius:10px;border:1px solid #eef3f8;margin-bottom:10px}
+.cart-item img{width:80px;height:80px;object-fit:cover;border-radius:8px}
+
+@media (max-width:720px){
+  .hero{flex-direction:column;align-items:flex-start}
+  .hero-right img{max-width:100%}
+  .nav-inner{flex-wrap:wrap}
+  .search{order:3;width:100%}
+}
